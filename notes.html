@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <script src="https://kit.fontawesome.com/10c92a3201.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./styling.css" />
+        <title>Survey</title>
+    </head>
+    <body>
+        <form>
+            <!--Creates a div with a text input for a Username-->
+            <div class="field-name">
+                <i class="fa-solid fa-user"></i> <!--This is an Icon From Font Awesome-->
+                <input type="text" placeholder="Username" required> <!--Required makes it required ### placehholder what is displated inside the textbox-->
+                <i class="fa-solid fa-arrow-down"></i>
+            </div>
+            <div class="field-email innactive"> <!-- Innactive class makes these all innactive (see css class) at firs because Username is supposed to be first-->
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" placeholder="Email" required>
+                <i class="fa-solid fa-arrow-down"></i>
+            </div>
+            <div class="field-password innactive">
+                <i class="fa-solid fa-key"></i>
+                <input type="password" placeholder="Password" required>
+                <i class="fa-solid fa-arrow-down"></i>
+            </div>
+            <div class="field-finish innactive">
+                <i class="fa-solid fa-heart"></i>
+                <p>Thank You!</p>
+                <i class="fa-solid fa-heart"></i>
+            </div>
+        </form>
+
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
