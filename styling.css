@@ -1,0 +1,77 @@
+* { /* What you should put in every CSS style sheet*/
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body{ /*only affects the child form not the divs I think*/
+    height: 100vh;
+    display: flex;
+    background-color: rgb(87, 189, 130);
+    transition: background-color 0.5s ease;
+    position: relative; /*Helps with moving everythhign the center somehow */
+}
+
+.field-name, /* affecting all the divs classes*/
+.field-email,
+.field-password,
+.field-finish {
+    position: absolute;
+    top: 50%;   /* Centers everything but from the corner*/
+    left: 50%;  /* there are multiple ways to center things but this way makes doing the animations easier*/
+    transform: translate(-50%, -50%); /* Need this so it's actually centered */
+    background: white; /* Makes everything bigger with ha white square background*/
+    height: 50px;
+    width: 400px;
+    display: flex; /* These three lines make everything centered in their own box idk man */
+    justify-content: space-between;
+    align-items: center; 
+    border-radius: 5px; /*Rounds the corners of the box - Mucho ascetic*/
+    transition: all 0.5s ease;
+}
+
+.field-name i, /* affecting all Icons in the div classes*/
+.field-email i,
+.field-password i,
+.field-finish i{
+    padding: 10px; /* adds padding to the icons*/
+}
+.fa-arrow-down{
+    cursor: pointer;    /* Changes the cursor to the pointer when hovering the icons*/
+}
+
+.field-name input, /*Goes to the class of these fields and effects the input elemnts*/
+.field-email input,
+.field-password input{
+    background: none; /* Removes the ugly background box to the input box*/
+    border: none;
+    flex: 1; /*allows it to stretch to the end*/
+    height: 100%; /*stretches it to the whole box*/
+    outline: none; /*gets rid of ugly blue border when you click on input box*/
+}
+
+
+div.innactive {
+    opacity: 0; /*Makes it invisible*/
+    pointer-events: none; /*makes it so you can't click on it*/
+    transform: translate(-50%, 50%); /*edited position*/
+}
+
+div.active{
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-50%, -50%); /*Makes it go to original position*/
+}
+
+ /*ANIMATIONS COOL*/
+@keyframes shake{
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    50%{
+        transform: translate(-50%, -50%) rotate(15deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
